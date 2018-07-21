@@ -3,6 +3,8 @@ Chalearn Inpainting challenge Track 2
 1st place on final test phase (challenge ID 'Sanghyun Woo')
 https://competitions.codalab.org/competitions/18421#results
 
+https://github.com/shwoo93/video_decaptioning/blob/master/architecture.PNG?raw=true
+
 Preparation:
 1. Install Python 3.6.4 version and Pytorch 0.3.1.post3
 2. Install Dependencies
