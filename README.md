@@ -1,7 +1,9 @@
 Chalearn Inpainting challenge Track 2
 
-1st Place on Final Test Phase
+1st place on final test phase (challenge ID 'Sanghyun Woo')
+https://competitions.codalab.org/competitions/18421#results
 
+Preparation:
 1. Install Python 3.6.4 version and Pytorch 0.3.1.post3
 2. Install Dependencies
   - visdom (training loss curve visualization)
@@ -16,4 +18,5 @@ Brief code instruction:
    scripts/train.sh (for training the final model)
    scripts/test.sh (for testing the final model)
    
-* Note that we attached pretrained weight of the final submitted model for test
+* Note that we attached pretrained weight of the final submitted model for test.(final_model.pth)
+  Properly modify the path of pretrained weight in test.sh file.
