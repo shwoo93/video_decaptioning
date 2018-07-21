@@ -7,7 +7,7 @@ Preparation:
 1. Install Python 3.6.4 version and Pytorch 0.3.1.post3
 2. Install Dependencies
   - visdom (training loss curve visualization)
-  - ffmpeg (video to png extraction)
+  - ffmpeg (video to png)
 3. Install pretrained weight
   - https://drive.google.com/open?id=1qsR2CXHet5h9nUl67nSpf2GW_ZxytWVK
 
