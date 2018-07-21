@@ -1,0 +1,29 @@
+CUDA_VISIBLE_DEVICES=0,1 python main.py \
+        --root_path /ssd2/vid_inpaint/Track2/dataset/ \
+        --video_path final_pngs \
+        --result_path ./results/icnet_deep_gate_t3/ \
+        --dataset VideoDecaptionData \
+        --model icnet_deep_gate \
+        --batch_size 128 \
+        --n_threads 16 \
+        --checkpoint 10 \
+        --prefix 'icnet_deep_gate_t3' \
+        --is_AE \
+        --sample_duration 9 \
+        --sample_size 128 \
+        --n_scales 1 \
+        --no_val \
+        --learning_rate 0.001 \
+        --t_stride 3 \
+        --no_loop \
+        --lr_flip \
+        --tb_flip \
+        --jit \
+        --no_mean_norm \
+        --norm_value 255 \
+        --t_shrink \
+        --wt_l2 0 \
+        --wt_l1 1.0 \
+        --ssim \
+        --grad \
+        # >logs/icnet_deep_gate_t3_train

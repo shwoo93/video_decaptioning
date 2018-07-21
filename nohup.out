@@ -1,0 +1,2641 @@
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Visdom python client failed to establish socket to get messages from the server. This feature is optional and can be disabled by initializing Visdom with `use_incoming_socket=False`, which will prevent waiting for this request to timeout.
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c15bb7908>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c15bb7908>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /events (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c15bb7908>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/SOGECPYH73JNLIJSBR4VZARGPA:/var/lib/docker/overlay2/l/ZTU42D3ZKAP3WHSJ2QRV5JANY5:/var/lib/docker/overlay2/l/7UFHIWY5EHXMLS7J5RIGX3VHZL:/var/lib/docker/overlay2/l/BJGFDLTUKHTRHMNRKVJ645IGLB:/var/lib/docker/overlay2/l/KRXOOSSRYFS7HXZEGOHQ7TX5NE:/var/lib/docker/overlay2/l/OBV3E7HIKJAQ4SMYDJ5V7W5G7T:/var/lib/docker/overlay2/l/4ETVJL5VKNQQI4LLMP4ITBX5JL:/var/lib/docker/overlay2/l/COV4YGPXC3DAOC3KSXAWYLUNHC:/var/lib/docker/overlay2/l/ISGBPOSJ5DLQB'
+Unexpected end of /proc/mounts line `VEN7PUZTARNBM:/var/lib/docker/overlay2/l/S5FHUSOWHIJK7SAUQU6LCLKDWY:/var/lib/docker/overlay2/l/ARUGHHP3IBXKVUBHQIADDHL6XH:/var/lib/docker/overlay2/l/SMGK6WQBCW62ECLPYTW75MEQH7:/var/lib/docker/overlay2/l/WJL4BM5HV3SS6NQHLMZSPQVKON:/var/lib/docker/overlay2/l/RDNB6JPCUGLWDCZP5GZIZZFWQD:/var/lib/docker/overlay2/l/FXY5PDSLXUPVALQB72PS4FKLZY:/var/lib/docker/overlay2/l/VHJHPTPD2Z2PV7HOFTJ6ACJPVK:/var/lib/docker/overlay2/l/Q5XLODL7R65VUJF5DTA7K6JPY5:/var/lib/docker/overlay2/l/7E37MFOF2TKAFRSILQ6MHR5MU3:/var/lib/do'
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c1585ce80>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c1585ce80>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c1585ce80>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c15857d68>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c15857d68>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c15857d68>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c1585f4e0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c1585f4e0>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c1585f4e0>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c1585f278>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c1585f278>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c1585f278>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c15860278>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c15860278>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c15860278>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c153cfeb8>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c153cfeb8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c153cfeb8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c15858550>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c15858550>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c15858550>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c153fa0f0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c153fa0f0>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c153fa0f0>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c153c10f0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c153c10f0>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c153c10f0>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c153ef668>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c153ef668>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c153ef668>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c153dc828>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c153dc828>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c153dc828>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c153ec2e8>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c153ec2e8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c153ec2e8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c153f60b8>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c153f60b8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c153f60b8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c153f7cf8>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c153f7cf8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c153f7cf8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c15383198>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c15383198>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c15383198>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c15394470>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c15394470>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c15394470>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c15394b38>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c15394b38>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c15394b38>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c15386e48>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c15386e48>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c15386e48>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c15392160>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c15392160>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c15392160>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c15393400>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c15393400>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c15393400>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c153f3240>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c153f3240>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c153f3240>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c153f30f0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c153f30f0>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c153f30f0>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c1585cba8>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c1585cba8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c1585cba8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c15858128>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c15858128>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c15858128>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c158582e8>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c158582e8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c158582e8>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c15394128>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c15394128>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c15394128>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c15386320>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c15386320>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c15386320>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c150cb780>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c150cb780>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c150cb780>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 141, in _new_conn
+    (self.host, self.port), self.timeout, **extra_kw)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 83, in create_connection
+    raise err
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/connection.py", line 73, in create_connection
+    sock.connect(sa)
+ConnectionRefusedError: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 357, in _make_request
+    conn.request(method, url, **httplib_request_kw)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1239, in request
+    self._send_request(method, url, body, headers, encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1285, in _send_request
+    self.endheaders(body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1234, in endheaders
+    self._send_output(message_body, encode_chunked=encode_chunked)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 1026, in _send_output
+    self.send(msg)
+  File "/root/anaconda3/lib/python3.6/http/client.py", line 964, in send
+    self.connect()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 166, in connect
+    conn = self._new_conn()
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connection.py", line 150, in _new_conn
+    self, "Failed to establish a new connection: %s" % e)
+urllib3.exceptions.NewConnectionError: <urllib3.connection.HTTPConnection object at 0x7f8c153c18d0>: Failed to establish a new connection: [Errno 111] Connection refused
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 440, in send
+    timeout=timeout
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/connectionpool.py", line 639, in urlopen
+    _stacktrace=sys.exc_info()[2])
+  File "/root/anaconda3/lib/python3.6/site-packages/urllib3/util/retry.py", line 388, in increment
+    raise MaxRetryError(_pool, url, error or ResponseError(cause))
+urllib3.exceptions.MaxRetryError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c153c18d0>: Failed to establish a new connection: [Errno 111] Connection refused',))
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/root/anaconda3/lib/python3.6/site-packages/visdom/__init__.py", line 388, in _send
+    data=json.dumps(msg),
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 112, in post
+    return request('post', url, data=data, json=json, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/api.py", line 58, in request
+    return session.request(method=method, url=url, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "/root/anaconda3/lib/python3.6/site-packages/requests/adapters.py", line 508, in send
+    raise ConnectionError(e, request=request)
+requests.exceptions.ConnectionError: HTTPConnectionPool(host='localhost', port=8097): Max retries exceeded with url: /update (Caused by NewConnectionError('<urllib3.connection.HTTPConnection object at 0x7f8c153c18d0>: Failed to establish a new connection: [Errno 111] Connection refused',))
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+[Errno 99] Cannot assign requested address
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/SOGECPYH73JNLIJSBR4VZARGPA:/var/lib/docker/overlay2/l/ZTU42D3ZKAP3WHSJ2QRV5JANY5:/var/lib/docker/overlay2/l/7UFHIWY5EHXMLS7J5RIGX3VHZL:/var/lib/docker/overlay2/l/BJGFDLTUKHTRHMNRKVJ645IGLB:/var/lib/docker/overlay2/l/KRXOOSSRYFS7HXZEGOHQ7TX5NE:/var/lib/docker/overlay2/l/OBV3E7HIKJAQ4SMYDJ5V7W5G7T:/var/lib/docker/overlay2/l/4ETVJL5VKNQQI4LLMP4ITBX5JL:/var/lib/docker/overlay2/l/COV4YGPXC3DAOC3KSXAWYLUNHC:/var/lib/docker/overlay2/l/ISGBPOSJ5DLQB'
+Unexpected end of /proc/mounts line `VEN7PUZTARNBM:/var/lib/docker/overlay2/l/S5FHUSOWHIJK7SAUQU6LCLKDWY:/var/lib/docker/overlay2/l/ARUGHHP3IBXKVUBHQIADDHL6XH:/var/lib/docker/overlay2/l/SMGK6WQBCW62ECLPYTW75MEQH7:/var/lib/docker/overlay2/l/WJL4BM5HV3SS6NQHLMZSPQVKON:/var/lib/docker/overlay2/l/RDNB6JPCUGLWDCZP5GZIZZFWQD:/var/lib/docker/overlay2/l/FXY5PDSLXUPVALQB72PS4FKLZY:/var/lib/docker/overlay2/l/VHJHPTPD2Z2PV7HOFTJ6ACJPVK:/var/lib/docker/overlay2/l/Q5XLODL7R65VUJF5DTA7K6JPY5:/var/lib/docker/overlay2/l/7E37MFOF2TKAFRSILQ6MHR5MU3:/var/lib/do'
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/SOGECPYH73JNLIJSBR4VZARGPA:/var/lib/docker/overlay2/l/ZTU42D3ZKAP3WHSJ2QRV5JANY5:/var/lib/docker/overlay2/l/7UFHIWY5EHXMLS7J5RIGX3VHZL:/var/lib/docker/overlay2/l/BJGFDLTUKHTRHMNRKVJ645IGLB:/var/lib/docker/overlay2/l/KRXOOSSRYFS7HXZEGOHQ7TX5NE:/var/lib/docker/overlay2/l/OBV3E7HIKJAQ4SMYDJ5V7W5G7T:/var/lib/docker/overlay2/l/4ETVJL5VKNQQI4LLMP4ITBX5JL:/var/lib/docker/overlay2/l/COV4YGPXC3DAOC3KSXAWYLUNHC:/var/lib/docker/overlay2/l/ISGBPOSJ5DLQB'
+Unexpected end of /proc/mounts line `VEN7PUZTARNBM:/var/lib/docker/overlay2/l/S5FHUSOWHIJK7SAUQU6LCLKDWY:/var/lib/docker/overlay2/l/ARUGHHP3IBXKVUBHQIADDHL6XH:/var/lib/docker/overlay2/l/SMGK6WQBCW62ECLPYTW75MEQH7:/var/lib/docker/overlay2/l/WJL4BM5HV3SS6NQHLMZSPQVKON:/var/lib/docker/overlay2/l/RDNB6JPCUGLWDCZP5GZIZZFWQD:/var/lib/docker/overlay2/l/FXY5PDSLXUPVALQB72PS4FKLZY:/var/lib/docker/overlay2/l/VHJHPTPD2Z2PV7HOFTJ6ACJPVK:/var/lib/docker/overlay2/l/Q5XLODL7R65VUJF5DTA7K6JPY5:/var/lib/docker/overlay2/l/7E37MFOF2TKAFRSILQ6MHR5MU3:/var/lib/do'
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/SOGECPYH73JNLIJSBR4VZARGPA:/var/lib/docker/overlay2/l/ZTU42D3ZKAP3WHSJ2QRV5JANY5:/var/lib/docker/overlay2/l/7UFHIWY5EHXMLS7J5RIGX3VHZL:/var/lib/docker/overlay2/l/BJGFDLTUKHTRHMNRKVJ645IGLB:/var/lib/docker/overlay2/l/KRXOOSSRYFS7HXZEGOHQ7TX5NE:/var/lib/docker/overlay2/l/OBV3E7HIKJAQ4SMYDJ5V7W5G7T:/var/lib/docker/overlay2/l/4ETVJL5VKNQQI4LLMP4ITBX5JL:/var/lib/docker/overlay2/l/COV4YGPXC3DAOC3KSXAWYLUNHC:/var/lib/docker/overlay2/l/ISGBPOSJ5DLQB'
+Unexpected end of /proc/mounts line `VEN7PUZTARNBM:/var/lib/docker/overlay2/l/S5FHUSOWHIJK7SAUQU6LCLKDWY:/var/lib/docker/overlay2/l/ARUGHHP3IBXKVUBHQIADDHL6XH:/var/lib/docker/overlay2/l/SMGK6WQBCW62ECLPYTW75MEQH7:/var/lib/docker/overlay2/l/WJL4BM5HV3SS6NQHLMZSPQVKON:/var/lib/docker/overlay2/l/RDNB6JPCUGLWDCZP5GZIZZFWQD:/var/lib/docker/overlay2/l/FXY5PDSLXUPVALQB72PS4FKLZY:/var/lib/docker/overlay2/l/VHJHPTPD2Z2PV7HOFTJ6ACJPVK:/var/lib/docker/overlay2/l/Q5XLODL7R65VUJF5DTA7K6JPY5:/var/lib/docker/overlay2/l/7E37MFOF2TKAFRSILQ6MHR5MU3:/var/lib/do'
+Terminated
+./scripts/icnet_deep_2Dt_l11_t4_sig_grad_ssim3_jit_png_gate.sh: 30: ./scripts/icnet_deep_2Dt_l11_t4_sig_grad_ssim3_jit_png_gate.sh: ori: not found
+Terminated
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/SOGECPYH73JNLIJSBR4VZARGPA:/var/lib/docker/overlay2/l/ZTU42D3ZKAP3WHSJ2QRV5JANY5:/var/lib/docker/overlay2/l/7UFHIWY5EHXMLS7J5RIGX3VHZL:/var/lib/docker/overlay2/l/BJGFDLTUKHTRHMNRKVJ645IGLB:/var/lib/docker/overlay2/l/KRXOOSSRYFS7HXZEGOHQ7TX5NE:/var/lib/docker/overlay2/l/OBV3E7HIKJAQ4SMYDJ5V7W5G7T:/var/lib/docker/overlay2/l/4ETVJL5VKNQQI4LLMP4ITBX5JL:/var/lib/docker/overlay2/l/COV4YGPXC3DAOC3KSXAWYLUNHC:/var/lib/docker/overlay2/l/ISGBPOSJ5DLQB'
+Unexpected end of /proc/mounts line `VEN7PUZTARNBM:/var/lib/docker/overlay2/l/S5FHUSOWHIJK7SAUQU6LCLKDWY:/var/lib/docker/overlay2/l/ARUGHHP3IBXKVUBHQIADDHL6XH:/var/lib/docker/overlay2/l/SMGK6WQBCW62ECLPYTW75MEQH7:/var/lib/docker/overlay2/l/WJL4BM5HV3SS6NQHLMZSPQVKON:/var/lib/docker/overlay2/l/RDNB6JPCUGLWDCZP5GZIZZFWQD:/var/lib/docker/overlay2/l/FXY5PDSLXUPVALQB72PS4FKLZY:/var/lib/docker/overlay2/l/VHJHPTPD2Z2PV7HOFTJ6ACJPVK:/var/lib/docker/overlay2/l/Q5XLODL7R65VUJF5DTA7K6JPY5:/var/lib/docker/overlay2/l/7E37MFOF2TKAFRSILQ6MHR5MU3:/var/lib/do'
+Terminated
+Terminated
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/SOGECPYH73JNLIJSBR4VZARGPA:/var/lib/docker/overlay2/l/ZTU42D3ZKAP3WHSJ2QRV5JANY5:/var/lib/docker/overlay2/l/7UFHIWY5EHXMLS7J5RIGX3VHZL:/var/lib/docker/overlay2/l/BJGFDLTUKHTRHMNRKVJ645IGLB:/var/lib/docker/overlay2/l/KRXOOSSRYFS7HXZEGOHQ7TX5NE:/var/lib/docker/overlay2/l/OBV3E7HIKJAQ4SMYDJ5V7W5G7T:/var/lib/docker/overlay2/l/4ETVJL5VKNQQI4LLMP4ITBX5JL:/var/lib/docker/overlay2/l/COV4YGPXC3DAOC3KSXAWYLUNHC:/var/lib/docker/overlay2/l/ISGBPOSJ5DLQB'
+Unexpected end of /proc/mounts line `VEN7PUZTARNBM:/var/lib/docker/overlay2/l/S5FHUSOWHIJK7SAUQU6LCLKDWY:/var/lib/docker/overlay2/l/ARUGHHP3IBXKVUBHQIADDHL6XH:/var/lib/docker/overlay2/l/SMGK6WQBCW62ECLPYTW75MEQH7:/var/lib/docker/overlay2/l/WJL4BM5HV3SS6NQHLMZSPQVKON:/var/lib/docker/overlay2/l/RDNB6JPCUGLWDCZP5GZIZZFWQD:/var/lib/docker/overlay2/l/FXY5PDSLXUPVALQB72PS4FKLZY:/var/lib/docker/overlay2/l/VHJHPTPD2Z2PV7HOFTJ6ACJPVK:/var/lib/docker/overlay2/l/Q5XLODL7R65VUJF5DTA7K6JPY5:/var/lib/docker/overlay2/l/7E37MFOF2TKAFRSILQ6MHR5MU3:/var/lib/do'
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/SOGECPYH73JNLIJSBR4VZARGPA:/var/lib/docker/overlay2/l/ZTU42D3ZKAP3WHSJ2QRV5JANY5:/var/lib/docker/overlay2/l/7UFHIWY5EHXMLS7J5RIGX3VHZL:/var/lib/docker/overlay2/l/BJGFDLTUKHTRHMNRKVJ645IGLB:/var/lib/docker/overlay2/l/KRXOOSSRYFS7HXZEGOHQ7TX5NE:/var/lib/docker/overlay2/l/OBV3E7HIKJAQ4SMYDJ5V7W5G7T:/var/lib/docker/overlay2/l/4ETVJL5VKNQQI4LLMP4ITBX5JL:/var/lib/docker/overlay2/l/COV4YGPXC3DAOC3KSXAWYLUNHC:/var/lib/docker/overlay2/l/ISGBPOSJ5DLQB'
+Unexpected end of /proc/mounts line `VEN7PUZTARNBM:/var/lib/docker/overlay2/l/S5FHUSOWHIJK7SAUQU6LCLKDWY:/var/lib/docker/overlay2/l/ARUGHHP3IBXKVUBHQIADDHL6XH:/var/lib/docker/overlay2/l/SMGK6WQBCW62ECLPYTW75MEQH7:/var/lib/docker/overlay2/l/WJL4BM5HV3SS6NQHLMZSPQVKON:/var/lib/docker/overlay2/l/RDNB6JPCUGLWDCZP5GZIZZFWQD:/var/lib/docker/overlay2/l/FXY5PDSLXUPVALQB72PS4FKLZY:/var/lib/docker/overlay2/l/VHJHPTPD2Z2PV7HOFTJ6ACJPVK:/var/lib/docker/overlay2/l/Q5XLODL7R65VUJF5DTA7K6JPY5:/var/lib/docker/overlay2/l/7E37MFOF2TKAFRSILQ6MHR5MU3:/var/lib/do'
+Terminated
+Terminated
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/SOGECPYH73JNLIJSBR4VZARGPA:/var/lib/docker/overlay2/l/ZTU42D3ZKAP3WHSJ2QRV5JANY5:/var/lib/docker/overlay2/l/7UFHIWY5EHXMLS7J5RIGX3VHZL:/var/lib/docker/overlay2/l/BJGFDLTUKHTRHMNRKVJ645IGLB:/var/lib/docker/overlay2/l/KRXOOSSRYFS7HXZEGOHQ7TX5NE:/var/lib/docker/overlay2/l/OBV3E7HIKJAQ4SMYDJ5V7W5G7T:/var/lib/docker/overlay2/l/4ETVJL5VKNQQI4LLMP4ITBX5JL:/var/lib/docker/overlay2/l/COV4YGPXC3DAOC3KSXAWYLUNHC:/var/lib/docker/overlay2/l/ISGBPOSJ5DLQB'
+Unexpected end of /proc/mounts line `VEN7PUZTARNBM:/var/lib/docker/overlay2/l/S5FHUSOWHIJK7SAUQU6LCLKDWY:/var/lib/docker/overlay2/l/ARUGHHP3IBXKVUBHQIADDHL6XH:/var/lib/docker/overlay2/l/SMGK6WQBCW62ECLPYTW75MEQH7:/var/lib/docker/overlay2/l/WJL4BM5HV3SS6NQHLMZSPQVKON:/var/lib/docker/overlay2/l/RDNB6JPCUGLWDCZP5GZIZZFWQD:/var/lib/docker/overlay2/l/FXY5PDSLXUPVALQB72PS4FKLZY:/var/lib/docker/overlay2/l/VHJHPTPD2Z2PV7HOFTJ6ACJPVK:/var/lib/docker/overlay2/l/Q5XLODL7R65VUJF5DTA7K6JPY5:/var/lib/docker/overlay2/l/7E37MFOF2TKAFRSILQ6MHR5MU3:/var/lib/do'
+Terminated
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/SOGECPYH73JNLIJSBR4VZARGPA:/var/lib/docker/overlay2/l/ZTU42D3ZKAP3WHSJ2QRV5JANY5:/var/lib/docker/overlay2/l/7UFHIWY5EHXMLS7J5RIGX3VHZL:/var/lib/docker/overlay2/l/BJGFDLTUKHTRHMNRKVJ645IGLB:/var/lib/docker/overlay2/l/KRXOOSSRYFS7HXZEGOHQ7TX5NE:/var/lib/docker/overlay2/l/OBV3E7HIKJAQ4SMYDJ5V7W5G7T:/var/lib/docker/overlay2/l/4ETVJL5VKNQQI4LLMP4ITBX5JL:/var/lib/docker/overlay2/l/COV4YGPXC3DAOC3KSXAWYLUNHC:/var/lib/docker/overlay2/l/ISGBPOSJ5DLQB'
+Unexpected end of /proc/mounts line `VEN7PUZTARNBM:/var/lib/docker/overlay2/l/S5FHUSOWHIJK7SAUQU6LCLKDWY:/var/lib/docker/overlay2/l/ARUGHHP3IBXKVUBHQIADDHL6XH:/var/lib/docker/overlay2/l/SMGK6WQBCW62ECLPYTW75MEQH7:/var/lib/docker/overlay2/l/WJL4BM5HV3SS6NQHLMZSPQVKON:/var/lib/docker/overlay2/l/RDNB6JPCUGLWDCZP5GZIZZFWQD:/var/lib/docker/overlay2/l/FXY5PDSLXUPVALQB72PS4FKLZY:/var/lib/docker/overlay2/l/VHJHPTPD2Z2PV7HOFTJ6ACJPVK:/var/lib/docker/overlay2/l/Q5XLODL7R65VUJF5DTA7K6JPY5:/var/lib/docker/overlay2/l/7E37MFOF2TKAFRSILQ6MHR5MU3:/var/lib/do'
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/SOGECPYH73JNLIJSBR4VZARGPA:/var/lib/docker/overlay2/l/ZTU42D3ZKAP3WHSJ2QRV5JANY5:/var/lib/docker/overlay2/l/7UFHIWY5EHXMLS7J5RIGX3VHZL:/var/lib/docker/overlay2/l/BJGFDLTUKHTRHMNRKVJ645IGLB:/var/lib/docker/overlay2/l/KRXOOSSRYFS7HXZEGOHQ7TX5NE:/var/lib/docker/overlay2/l/OBV3E7HIKJAQ4SMYDJ5V7W5G7T:/var/lib/docker/overlay2/l/4ETVJL5VKNQQI4LLMP4ITBX5JL:/var/lib/docker/overlay2/l/COV4YGPXC3DAOC3KSXAWYLUNHC:/var/lib/docker/overlay2/l/ISGBPOSJ5DLQB'
+Unexpected end of /proc/mounts line `VEN7PUZTARNBM:/var/lib/docker/overlay2/l/S5FHUSOWHIJK7SAUQU6LCLKDWY:/var/lib/docker/overlay2/l/ARUGHHP3IBXKVUBHQIADDHL6XH:/var/lib/docker/overlay2/l/SMGK6WQBCW62ECLPYTW75MEQH7:/var/lib/docker/overlay2/l/WJL4BM5HV3SS6NQHLMZSPQVKON:/var/lib/docker/overlay2/l/RDNB6JPCUGLWDCZP5GZIZZFWQD:/var/lib/docker/overlay2/l/FXY5PDSLXUPVALQB72PS4FKLZY:/var/lib/docker/overlay2/l/VHJHPTPD2Z2PV7HOFTJ6ACJPVK:/var/lib/docker/overlay2/l/Q5XLODL7R65VUJF5DTA7K6JPY5:/var/lib/docker/overlay2/l/7E37MFOF2TKAFRSILQ6MHR5MU3:/var/lib/do'
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/SOGECPYH73JNLIJSBR4VZARGPA:/var/lib/docker/overlay2/l/ZTU42D3ZKAP3WHSJ2QRV5JANY5:/var/lib/docker/overlay2/l/7UFHIWY5EHXMLS7J5RIGX3VHZL:/var/lib/docker/overlay2/l/BJGFDLTUKHTRHMNRKVJ645IGLB:/var/lib/docker/overlay2/l/KRXOOSSRYFS7HXZEGOHQ7TX5NE:/var/lib/docker/overlay2/l/OBV3E7HIKJAQ4SMYDJ5V7W5G7T:/var/lib/docker/overlay2/l/4ETVJL5VKNQQI4LLMP4ITBX5JL:/var/lib/docker/overlay2/l/COV4YGPXC3DAOC3KSXAWYLUNHC:/var/lib/docker/overlay2/l/ISGBPOSJ5DLQB'
+Unexpected end of /proc/mounts line `VEN7PUZTARNBM:/var/lib/docker/overlay2/l/S5FHUSOWHIJK7SAUQU6LCLKDWY:/var/lib/docker/overlay2/l/ARUGHHP3IBXKVUBHQIADDHL6XH:/var/lib/docker/overlay2/l/SMGK6WQBCW62ECLPYTW75MEQH7:/var/lib/docker/overlay2/l/WJL4BM5HV3SS6NQHLMZSPQVKON:/var/lib/docker/overlay2/l/RDNB6JPCUGLWDCZP5GZIZZFWQD:/var/lib/docker/overlay2/l/FXY5PDSLXUPVALQB72PS4FKLZY:/var/lib/docker/overlay2/l/VHJHPTPD2Z2PV7HOFTJ6ACJPVK:/var/lib/docker/overlay2/l/Q5XLODL7R65VUJF5DTA7K6JPY5:/var/lib/docker/overlay2/l/7E37MFOF2TKAFRSILQ6MHR5MU3:/var/lib/do'
+Terminated
+Terminated
+Terminated
+usage: main.py [-h] [--root_path ROOT_PATH] [--video_path VIDEO_PATH]
+               [--result_path RESULT_PATH] [--dataset DATASET]
+               [--n_classes N_CLASSES]
+               [--n_finetune_classes N_FINETUNE_CLASSES]
+               [--sample_size SAMPLE_SIZE] [--sample_duration SAMPLE_DURATION]
+               [--initial_scale INITIAL_SCALE] [--n_scales N_SCALES]
+               [--scale_step SCALE_STEP] [--train_crop TRAIN_CROP]
+               [--learning_rate LEARNING_RATE] [--momentum MOMENTUM]
+               [--dampening DAMPENING] [--weight_decay WEIGHT_DECAY]
+               [--mean_dataset MEAN_DATASET] [--no_mean_norm] [--std_norm]
+               [--nesterov] [--optimizer OPTIMIZER]
+               [--lr_patience LR_PATIENCE] [--batch_size BATCH_SIZE]
+               [--n_epochs N_EPOCHS] [--begin_epoch BEGIN_EPOCH]
+               [--n_val_samples N_VAL_SAMPLES] [--resume_path RESUME_PATH]
+               [--pretrain_path PRETRAIN_PATH]
+               [--ft_begin_index FT_BEGIN_INDEX] [--no_train] [--no_val]
+               [--test] [--test_subset TEST_SUBSET]
+               [--scale_in_test SCALE_IN_TEST]
+               [--crop_position_in_test CROP_POSITION_IN_TEST]
+               [--no_softmax_in_test] [--no_cuda] [--n_threads N_THREADS]
+               [--checkpoint CHECKPOINT] [--no_hflip]
+               [--norm_value NORM_VALUE] [--model MODEL]
+               [--model_depth MODEL_DEPTH] [--resnet_shortcut RESNET_SHORTCUT]
+               [--wide_resnet_k WIDE_RESNET_K]
+               [--resnext_cardinality RESNEXT_CARDINALITY]
+               [--manual_seed MANUAL_SEED] [--use-visdom] [--prefix PREFIX]
+               [--model_init MODEL_INIT] [--ft_begin_layer FT_BEGIN_LAYER]
+               [--dropout DROPOUT] [--distributed] [--t_flip] [--t_perm]
+               [--n_perm N_PERM] [--no_loop] [--is_AE] [--t_stride T_STRIDE]
+               [--is_gray] [--is_pred] [--is_fwbw] [--is_cube] [--is_multipuz]
+               [--coefficient COEFFICIENT] [--lr_flip] [--tb_flip] [--use_gan]
+               [--postproc] [--two_step] [--wt_l2 WT_L2] [--wt_l1 WT_L1]
+               [--scaledown] [--residual] [--nomask] [--t_shrink] [--grad]
+               [--ssim] [--mpl] [--mirror] [--nl] [--diff] [--minl1]
+               [--mingan] [--mingrad] [--end] [--jit] [--crop] [--cut]
+               [--perImage]
+main.py: error: unrecognized arguments: nvid
+./scripts/icnet_deep_2Dt_l11_t4_sig_grad_ssim3_jit_png_gate.sh: 2: ./scripts/icnet_deep_2Dt_l11_t4_sig_grad_ssim3_jit_png_gate.sh: --root_path: not found
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/SOGECPYH73JNLIJSBR4VZARGPA:/var/lib/docker/overlay2/l/ZTU42D3ZKAP3WHSJ2QRV5JANY5:/var/lib/docker/overlay2/l/7UFHIWY5EHXMLS7J5RIGX3VHZL:/var/lib/docker/overlay2/l/BJGFDLTUKHTRHMNRKVJ645IGLB:/var/lib/docker/overlay2/l/KRXOOSSRYFS7HXZEGOHQ7TX5NE:/var/lib/docker/overlay2/l/OBV3E7HIKJAQ4SMYDJ5V7W5G7T:/var/lib/docker/overlay2/l/4ETVJL5VKNQQI4LLMP4ITBX5JL:/var/lib/docker/overlay2/l/COV4YGPXC3DAOC3KSXAWYLUNHC:/var/lib/docker/overlay2/l/ISGBPOSJ5DLQB'
+Unexpected end of /proc/mounts line `VEN7PUZTARNBM:/var/lib/docker/overlay2/l/S5FHUSOWHIJK7SAUQU6LCLKDWY:/var/lib/docker/overlay2/l/ARUGHHP3IBXKVUBHQIADDHL6XH:/var/lib/docker/overlay2/l/SMGK6WQBCW62ECLPYTW75MEQH7:/var/lib/docker/overlay2/l/WJL4BM5HV3SS6NQHLMZSPQVKON:/var/lib/docker/overlay2/l/RDNB6JPCUGLWDCZP5GZIZZFWQD:/var/lib/docker/overlay2/l/FXY5PDSLXUPVALQB72PS4FKLZY:/var/lib/docker/overlay2/l/VHJHPTPD2Z2PV7HOFTJ6ACJPVK:/var/lib/docker/overlay2/l/Q5XLODL7R65VUJF5DTA7K6JPY5:/var/lib/docker/overlay2/l/7E37MFOF2TKAFRSILQ6MHR5MU3:/var/lib/do'
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/SOGECPYH73JNLIJSBR4VZARGPA:/var/lib/docker/overlay2/l/ZTU42D3ZKAP3WHSJ2QRV5JANY5:/var/lib/docker/overlay2/l/7UFHIWY5EHXMLS7J5RIGX3VHZL:/var/lib/docker/overlay2/l/BJGFDLTUKHTRHMNRKVJ645IGLB:/var/lib/docker/overlay2/l/KRXOOSSRYFS7HXZEGOHQ7TX5NE:/var/lib/docker/overlay2/l/OBV3E7HIKJAQ4SMYDJ5V7W5G7T:/var/lib/docker/overlay2/l/4ETVJL5VKNQQI4LLMP4ITBX5JL:/var/lib/docker/overlay2/l/COV4YGPXC3DAOC3KSXAWYLUNHC:/var/lib/docker/overlay2/l/ISGBPOSJ5DLQB'
+Unexpected end of /proc/mounts line `VEN7PUZTARNBM:/var/lib/docker/overlay2/l/S5FHUSOWHIJK7SAUQU6LCLKDWY:/var/lib/docker/overlay2/l/ARUGHHP3IBXKVUBHQIADDHL6XH:/var/lib/docker/overlay2/l/SMGK6WQBCW62ECLPYTW75MEQH7:/var/lib/docker/overlay2/l/WJL4BM5HV3SS6NQHLMZSPQVKON:/var/lib/docker/overlay2/l/RDNB6JPCUGLWDCZP5GZIZZFWQD:/var/lib/docker/overlay2/l/FXY5PDSLXUPVALQB72PS4FKLZY:/var/lib/docker/overlay2/l/VHJHPTPD2Z2PV7HOFTJ6ACJPVK:/var/lib/docker/overlay2/l/Q5XLODL7R65VUJF5DTA7K6JPY5:/var/lib/docker/overlay2/l/7E37MFOF2TKAFRSILQ6MHR5MU3:/var/lib/do'
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/SOGECPYH73JNLIJSBR4VZARGPA:/var/lib/docker/overlay2/l/ZTU42D3ZKAP3WHSJ2QRV5JANY5:/var/lib/docker/overlay2/l/7UFHIWY5EHXMLS7J5RIGX3VHZL:/var/lib/docker/overlay2/l/BJGFDLTUKHTRHMNRKVJ645IGLB:/var/lib/docker/overlay2/l/KRXOOSSRYFS7HXZEGOHQ7TX5NE:/var/lib/docker/overlay2/l/OBV3E7HIKJAQ4SMYDJ5V7W5G7T:/var/lib/docker/overlay2/l/4ETVJL5VKNQQI4LLMP4ITBX5JL:/var/lib/docker/overlay2/l/COV4YGPXC3DAOC3KSXAWYLUNHC:/var/lib/docker/overlay2/l/ISGBPOSJ5DLQB'
+Unexpected end of /proc/mounts line `VEN7PUZTARNBM:/var/lib/docker/overlay2/l/S5FHUSOWHIJK7SAUQU6LCLKDWY:/var/lib/docker/overlay2/l/ARUGHHP3IBXKVUBHQIADDHL6XH:/var/lib/docker/overlay2/l/SMGK6WQBCW62ECLPYTW75MEQH7:/var/lib/docker/overlay2/l/WJL4BM5HV3SS6NQHLMZSPQVKON:/var/lib/docker/overlay2/l/RDNB6JPCUGLWDCZP5GZIZZFWQD:/var/lib/docker/overlay2/l/FXY5PDSLXUPVALQB72PS4FKLZY:/var/lib/docker/overlay2/l/VHJHPTPD2Z2PV7HOFTJ6ACJPVK:/var/lib/docker/overlay2/l/Q5XLODL7R65VUJF5DTA7K6JPY5:/var/lib/docker/overlay2/l/7E37MFOF2TKAFRSILQ6MHR5MU3:/var/lib/do'
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/SOGECPYH73JNLIJSBR4VZARGPA:/var/lib/docker/overlay2/l/ZTU42D3ZKAP3WHSJ2QRV5JANY5:/var/lib/docker/overlay2/l/7UFHIWY5EHXMLS7J5RIGX3VHZL:/var/lib/docker/overlay2/l/BJGFDLTUKHTRHMNRKVJ645IGLB:/var/lib/docker/overlay2/l/KRXOOSSRYFS7HXZEGOHQ7TX5NE:/var/lib/docker/overlay2/l/OBV3E7HIKJAQ4SMYDJ5V7W5G7T:/var/lib/docker/overlay2/l/4ETVJL5VKNQQI4LLMP4ITBX5JL:/var/lib/docker/overlay2/l/COV4YGPXC3DAOC3KSXAWYLUNHC:/var/lib/docker/overlay2/l/ISGBPOSJ5DLQB'
+Unexpected end of /proc/mounts line `VEN7PUZTARNBM:/var/lib/docker/overlay2/l/S5FHUSOWHIJK7SAUQU6LCLKDWY:/var/lib/docker/overlay2/l/ARUGHHP3IBXKVUBHQIADDHL6XH:/var/lib/docker/overlay2/l/SMGK6WQBCW62ECLPYTW75MEQH7:/var/lib/docker/overlay2/l/WJL4BM5HV3SS6NQHLMZSPQVKON:/var/lib/docker/overlay2/l/RDNB6JPCUGLWDCZP5GZIZZFWQD:/var/lib/docker/overlay2/l/FXY5PDSLXUPVALQB72PS4FKLZY:/var/lib/docker/overlay2/l/VHJHPTPD2Z2PV7HOFTJ6ACJPVK:/var/lib/docker/overlay2/l/Q5XLODL7R65VUJF5DTA7K6JPY5:/var/lib/docker/overlay2/l/7E37MFOF2TKAFRSILQ6MHR5MU3:/var/lib/do'
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/SOGECPYH73JNLIJSBR4VZARGPA:/var/lib/docker/overlay2/l/ZTU42D3ZKAP3WHSJ2QRV5JANY5:/var/lib/docker/overlay2/l/7UFHIWY5EHXMLS7J5RIGX3VHZL:/var/lib/docker/overlay2/l/BJGFDLTUKHTRHMNRKVJ645IGLB:/var/lib/docker/overlay2/l/KRXOOSSRYFS7HXZEGOHQ7TX5NE:/var/lib/docker/overlay2/l/OBV3E7HIKJAQ4SMYDJ5V7W5G7T:/var/lib/docker/overlay2/l/4ETVJL5VKNQQI4LLMP4ITBX5JL:/var/lib/docker/overlay2/l/COV4YGPXC3DAOC3KSXAWYLUNHC:/var/lib/docker/overlay2/l/ISGBPOSJ5DLQB'
+Unexpected end of /proc/mounts line `VEN7PUZTARNBM:/var/lib/docker/overlay2/l/S5FHUSOWHIJK7SAUQU6LCLKDWY:/var/lib/docker/overlay2/l/ARUGHHP3IBXKVUBHQIADDHL6XH:/var/lib/docker/overlay2/l/SMGK6WQBCW62ECLPYTW75MEQH7:/var/lib/docker/overlay2/l/WJL4BM5HV3SS6NQHLMZSPQVKON:/var/lib/docker/overlay2/l/RDNB6JPCUGLWDCZP5GZIZZFWQD:/var/lib/docker/overlay2/l/FXY5PDSLXUPVALQB72PS4FKLZY:/var/lib/docker/overlay2/l/VHJHPTPD2Z2PV7HOFTJ6ACJPVK:/var/lib/docker/overlay2/l/Q5XLODL7R65VUJF5DTA7K6JPY5:/var/lib/docker/overlay2/l/7E37MFOF2TKAFRSILQ6MHR5MU3:/var/lib/do'
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/SOGECPYH73JNLIJSBR4VZARGPA:/var/lib/docker/overlay2/l/ZTU42D3ZKAP3WHSJ2QRV5JANY5:/var/lib/docker/overlay2/l/7UFHIWY5EHXMLS7J5RIGX3VHZL:/var/lib/docker/overlay2/l/BJGFDLTUKHTRHMNRKVJ645IGLB:/var/lib/docker/overlay2/l/KRXOOSSRYFS7HXZEGOHQ7TX5NE:/var/lib/docker/overlay2/l/OBV3E7HIKJAQ4SMYDJ5V7W5G7T:/var/lib/docker/overlay2/l/4ETVJL5VKNQQI4LLMP4ITBX5JL:/var/lib/docker/overlay2/l/COV4YGPXC3DAOC3KSXAWYLUNHC:/var/lib/docker/overlay2/l/ISGBPOSJ5DLQB'
+Unexpected end of /proc/mounts line `VEN7PUZTARNBM:/var/lib/docker/overlay2/l/S5FHUSOWHIJK7SAUQU6LCLKDWY:/var/lib/docker/overlay2/l/ARUGHHP3IBXKVUBHQIADDHL6XH:/var/lib/docker/overlay2/l/SMGK6WQBCW62ECLPYTW75MEQH7:/var/lib/docker/overlay2/l/WJL4BM5HV3SS6NQHLMZSPQVKON:/var/lib/docker/overlay2/l/RDNB6JPCUGLWDCZP5GZIZZFWQD:/var/lib/docker/overlay2/l/FXY5PDSLXUPVALQB72PS4FKLZY:/var/lib/docker/overlay2/l/VHJHPTPD2Z2PV7HOFTJ6ACJPVK:/var/lib/docker/overlay2/l/Q5XLODL7R65VUJF5DTA7K6JPY5:/var/lib/docker/overlay2/l/7E37MFOF2TKAFRSILQ6MHR5MU3:/var/lib/do'
+Terminated
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/SOGECPYH73JNLIJSBR4VZARGPA:/var/lib/docker/overlay2/l/ZTU42D3ZKAP3WHSJ2QRV5JANY5:/var/lib/docker/overlay2/l/7UFHIWY5EHXMLS7J5RIGX3VHZL:/var/lib/docker/overlay2/l/BJGFDLTUKHTRHMNRKVJ645IGLB:/var/lib/docker/overlay2/l/KRXOOSSRYFS7HXZEGOHQ7TX5NE:/var/lib/docker/overlay2/l/OBV3E7HIKJAQ4SMYDJ5V7W5G7T:/var/lib/docker/overlay2/l/4ETVJL5VKNQQI4LLMP4ITBX5JL:/var/lib/docker/overlay2/l/COV4YGPXC3DAOC3KSXAWYLUNHC:/var/lib/docker/overlay2/l/ISGBPOSJ5DLQB'
+Unexpected end of /proc/mounts line `VEN7PUZTARNBM:/var/lib/docker/overlay2/l/S5FHUSOWHIJK7SAUQU6LCLKDWY:/var/lib/docker/overlay2/l/ARUGHHP3IBXKVUBHQIADDHL6XH:/var/lib/docker/overlay2/l/SMGK6WQBCW62ECLPYTW75MEQH7:/var/lib/docker/overlay2/l/WJL4BM5HV3SS6NQHLMZSPQVKON:/var/lib/docker/overlay2/l/RDNB6JPCUGLWDCZP5GZIZZFWQD:/var/lib/docker/overlay2/l/FXY5PDSLXUPVALQB72PS4FKLZY:/var/lib/docker/overlay2/l/VHJHPTPD2Z2PV7HOFTJ6ACJPVK:/var/lib/docker/overlay2/l/Q5XLODL7R65VUJF5DTA7K6JPY5:/var/lib/docker/overlay2/l/7E37MFOF2TKAFRSILQ6MHR5MU3:/var/lib/do'
+Terminated
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/SOGECPYH73JNLIJSBR4VZARGPA:/var/lib/docker/overlay2/l/ZTU42D3ZKAP3WHSJ2QRV5JANY5:/var/lib/docker/overlay2/l/7UFHIWY5EHXMLS7J5RIGX3VHZL:/var/lib/docker/overlay2/l/BJGFDLTUKHTRHMNRKVJ645IGLB:/var/lib/docker/overlay2/l/KRXOOSSRYFS7HXZEGOHQ7TX5NE:/var/lib/docker/overlay2/l/OBV3E7HIKJAQ4SMYDJ5V7W5G7T:/var/lib/docker/overlay2/l/4ETVJL5VKNQQI4LLMP4ITBX5JL:/var/lib/docker/overlay2/l/COV4YGPXC3DAOC3KSXAWYLUNHC:/var/lib/docker/overlay2/l/ISGBPOSJ5DLQB'
+Unexpected end of /proc/mounts line `VEN7PUZTARNBM:/var/lib/docker/overlay2/l/S5FHUSOWHIJK7SAUQU6LCLKDWY:/var/lib/docker/overlay2/l/ARUGHHP3IBXKVUBHQIADDHL6XH:/var/lib/docker/overlay2/l/SMGK6WQBCW62ECLPYTW75MEQH7:/var/lib/docker/overlay2/l/WJL4BM5HV3SS6NQHLMZSPQVKON:/var/lib/docker/overlay2/l/RDNB6JPCUGLWDCZP5GZIZZFWQD:/var/lib/docker/overlay2/l/FXY5PDSLXUPVALQB72PS4FKLZY:/var/lib/docker/overlay2/l/VHJHPTPD2Z2PV7HOFTJ6ACJPVK:/var/lib/docker/overlay2/l/Q5XLODL7R65VUJF5DTA7K6JPY5:/var/lib/docker/overlay2/l/7E37MFOF2TKAFRSILQ6MHR5MU3:/var/lib/do'
+/root/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/SOGECPYH73JNLIJSBR4VZARGPA:/var/lib/docker/overlay2/l/ZTU42D3ZKAP3WHSJ2QRV5JANY5:/var/lib/docker/overlay2/l/7UFHIWY5EHXMLS7J5RIGX3VHZL:/var/lib/docker/overlay2/l/BJGFDLTUKHTRHMNRKVJ645IGLB:/var/lib/docker/overlay2/l/KRXOOSSRYFS7HXZEGOHQ7TX5NE:/var/lib/docker/overlay2/l/OBV3E7HIKJAQ4SMYDJ5V7W5G7T:/var/lib/docker/overlay2/l/4ETVJL5VKNQQI4LLMP4ITBX5JL:/var/lib/docker/overlay2/l/COV4YGPXC3DAOC3KSXAWYLUNHC:/var/lib/docker/overlay2/l/ISGBPOSJ5DLQB'
+Unexpected end of /proc/mounts line `VEN7PUZTARNBM:/var/lib/docker/overlay2/l/S5FHUSOWHIJK7SAUQU6LCLKDWY:/var/lib/docker/overlay2/l/ARUGHHP3IBXKVUBHQIADDHL6XH:/var/lib/docker/overlay2/l/SMGK6WQBCW62ECLPYTW75MEQH7:/var/lib/docker/overlay2/l/WJL4BM5HV3SS6NQHLMZSPQVKON:/var/lib/docker/overlay2/l/RDNB6JPCUGLWDCZP5GZIZZFWQD:/var/lib/docker/overlay2/l/FXY5PDSLXUPVALQB72PS4FKLZY:/var/lib/docker/overlay2/l/VHJHPTPD2Z2PV7HOFTJ6ACJPVK:/var/lib/docker/overlay2/l/Q5XLODL7R65VUJF5DTA7K6JPY5:/var/lib/docker/overlay2/l/7E37MFOF2TKAFRSILQ6MHR5MU3:/var/lib/do'
+/root/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/SOGECPYH73JNLIJSBR4VZARGPA:/var/lib/docker/overlay2/l/ZTU42D3ZKAP3WHSJ2QRV5JANY5:/var/lib/docker/overlay2/l/7UFHIWY5EHXMLS7J5RIGX3VHZL:/var/lib/docker/overlay2/l/BJGFDLTUKHTRHMNRKVJ645IGLB:/var/lib/docker/overlay2/l/KRXOOSSRYFS7HXZEGOHQ7TX5NE:/var/lib/docker/overlay2/l/OBV3E7HIKJAQ4SMYDJ5V7W5G7T:/var/lib/docker/overlay2/l/4ETVJL5VKNQQI4LLMP4ITBX5JL:/var/lib/docker/overlay2/l/COV4YGPXC3DAOC3KSXAWYLUNHC:/var/lib/docker/overlay2/l/ISGBPOSJ5DLQB'
+Unexpected end of /proc/mounts line `VEN7PUZTARNBM:/var/lib/docker/overlay2/l/S5FHUSOWHIJK7SAUQU6LCLKDWY:/var/lib/docker/overlay2/l/ARUGHHP3IBXKVUBHQIADDHL6XH:/var/lib/docker/overlay2/l/SMGK6WQBCW62ECLPYTW75MEQH7:/var/lib/docker/overlay2/l/WJL4BM5HV3SS6NQHLMZSPQVKON:/var/lib/docker/overlay2/l/RDNB6JPCUGLWDCZP5GZIZZFWQD:/var/lib/docker/overlay2/l/FXY5PDSLXUPVALQB72PS4FKLZY:/var/lib/docker/overlay2/l/VHJHPTPD2Z2PV7HOFTJ6ACJPVK:/var/lib/docker/overlay2/l/Q5XLODL7R65VUJF5DTA7K6JPY5:/var/lib/docker/overlay2/l/7E37MFOF2TKAFRSILQ6MHR5MU3:/var/lib/do'
+/root/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/SOGECPYH73JNLIJSBR4VZARGPA:/var/lib/docker/overlay2/l/ZTU42D3ZKAP3WHSJ2QRV5JANY5:/var/lib/docker/overlay2/l/7UFHIWY5EHXMLS7J5RIGX3VHZL:/var/lib/docker/overlay2/l/BJGFDLTUKHTRHMNRKVJ645IGLB:/var/lib/docker/overlay2/l/KRXOOSSRYFS7HXZEGOHQ7TX5NE:/var/lib/docker/overlay2/l/OBV3E7HIKJAQ4SMYDJ5V7W5G7T:/var/lib/docker/overlay2/l/4ETVJL5VKNQQI4LLMP4ITBX5JL:/var/lib/docker/overlay2/l/COV4YGPXC3DAOC3KSXAWYLUNHC:/var/lib/docker/overlay2/l/ISGBPOSJ5DLQB'
+Unexpected end of /proc/mounts line `VEN7PUZTARNBM:/var/lib/docker/overlay2/l/S5FHUSOWHIJK7SAUQU6LCLKDWY:/var/lib/docker/overlay2/l/ARUGHHP3IBXKVUBHQIADDHL6XH:/var/lib/docker/overlay2/l/SMGK6WQBCW62ECLPYTW75MEQH7:/var/lib/docker/overlay2/l/WJL4BM5HV3SS6NQHLMZSPQVKON:/var/lib/docker/overlay2/l/RDNB6JPCUGLWDCZP5GZIZZFWQD:/var/lib/docker/overlay2/l/FXY5PDSLXUPVALQB72PS4FKLZY:/var/lib/docker/overlay2/l/VHJHPTPD2Z2PV7HOFTJ6ACJPVK:/var/lib/docker/overlay2/l/Q5XLODL7R65VUJF5DTA7K6JPY5:/var/lib/docker/overlay2/l/7E37MFOF2TKAFRSILQ6MHR5MU3:/var/lib/do'
+/root/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+Unexpected end of /proc/mounts line `overlay / overlay rw,relatime,lowerdir=/var/lib/docker/overlay2/l/SOGECPYH73JNLIJSBR4VZARGPA:/var/lib/docker/overlay2/l/ZTU42D3ZKAP3WHSJ2QRV5JANY5:/var/lib/docker/overlay2/l/7UFHIWY5EHXMLS7J5RIGX3VHZL:/var/lib/docker/overlay2/l/BJGFDLTUKHTRHMNRKVJ645IGLB:/var/lib/docker/overlay2/l/KRXOOSSRYFS7HXZEGOHQ7TX5NE:/var/lib/docker/overlay2/l/OBV3E7HIKJAQ4SMYDJ5V7W5G7T:/var/lib/docker/overlay2/l/4ETVJL5VKNQQI4LLMP4ITBX5JL:/var/lib/docker/overlay2/l/COV4YGPXC3DAOC3KSXAWYLUNHC:/var/lib/docker/overlay2/l/ISGBPOSJ5DLQB'
+Unexpected end of /proc/mounts line `VEN7PUZTARNBM:/var/lib/docker/overlay2/l/S5FHUSOWHIJK7SAUQU6LCLKDWY:/var/lib/docker/overlay2/l/ARUGHHP3IBXKVUBHQIADDHL6XH:/var/lib/docker/overlay2/l/SMGK6WQBCW62ECLPYTW75MEQH7:/var/lib/docker/overlay2/l/WJL4BM5HV3SS6NQHLMZSPQVKON:/var/lib/docker/overlay2/l/RDNB6JPCUGLWDCZP5GZIZZFWQD:/var/lib/docker/overlay2/l/FXY5PDSLXUPVALQB72PS4FKLZY:/var/lib/docker/overlay2/l/VHJHPTPD2Z2PV7HOFTJ6ACJPVK:/var/lib/docker/overlay2/l/Q5XLODL7R65VUJF5DTA7K6JPY5:/var/lib/docker/overlay2/l/7E37MFOF2TKAFRSILQ6MHR5MU3:/var/lib/do'
+/root/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+/root/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
+./scripts/test_icnet_deep_grad_ssim3_jit_png.sh: 38: ./scripts/test_icnet_deep_grad_ssim3_jit_png.sh: .pth: not found
+/root/anaconda3/lib/python3.6/site-packages/h5py/__init__.py:36: FutureWarning: Conversion of the second argument of issubdtype from `float` to `np.floating` is deprecated. In future, it will be treated as `np.float64 == np.dtype(float).type`.
+  from ._conv import register_converters as _register_converters
