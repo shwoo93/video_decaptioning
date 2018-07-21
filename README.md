@@ -15,8 +15,8 @@ Brief code instruction:
 1. Extract png files for each mp4 videos (use video_png.py)
 2. Set root path (modify opt.py)
 3. You can run the code using scripts
-   scripts/train.sh (for training the final model)
-   scripts/test.sh (for testing the final model)
+  - scripts/train.sh (for training the final model)
+  - scripts/test.sh (for testing the final model)
    
 * Note that we attached pretrained weight of the final submitted model for test.(final_model.pth)
   Properly modify the path of pretrained weight in test.sh file.
