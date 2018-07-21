@@ -3,7 +3,11 @@ Chalearn Inpainting challenge Track 2
 1st place on final test phase (challenge ID 'Sanghyun Woo')
 https://competitions.codalab.org/competitions/18421#results
 
+Final model overview
+
 ![architecture](https://user-images.githubusercontent.com/13035722/43037442-f93bbdbc-8d47-11e8-9094-35a4eb042c3a.PNG)
+
+
 
 Preparation:
 1. Install Python 3.6.4 version and Pytorch 0.3.1.post3
