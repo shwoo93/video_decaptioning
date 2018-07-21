@@ -16,7 +16,8 @@ Brief code instruction:
 2. Set root path (modify opt.py)
 3. You can run the code using scripts
   - scripts/train.sh (for training the final model)
+    - we trained for 200 epochs (about 3days using 2 gpus, GTX 1080 ti)
   - scripts/test.sh (for testing the final model)
-   
+    - 1~2 sec per video
 * Note that we attached pretrained weight of the final model at google drive.(final_model.pth)
   Please properly modify the path of pretrained weight in test.sh file for testing.
