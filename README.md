@@ -18,5 +18,5 @@ Brief code instruction:
   - scripts/train.sh (for training the final model)
   - scripts/test.sh (for testing the final model)
    
-* Note that we attached pretrained weight of the final submitted model for test.(final_model.pth)
-  Properly modify the path of pretrained weight in test.sh file.
+* Note that we attached pretrained weight of the final model at google drive.(final_model.pth)
+  Please properly modify the path of pretrained weight in test.sh file for testing.
