@@ -20,7 +20,7 @@ Preparation:
 Brief code instruction:
 1. Extract png files for each mp4 videos (use video_png.py)
 2. Set root path (modify --root_path flag in scripts)
-3. You can run the code using scripts
+3. Run the code using scripts
   - scripts/train.sh (for training the final model)
     - we trained for 200 epochs (about 3days using 2 gpus, GTX 1080 ti)
   - scripts/test.sh (for testing the final model)
