@@ -1,6 +1,6 @@
 Chalearn Inpainting challenge Track 2
 
-1st place on final test phase (challenge ID 'Sanghyun Woo')
+1st place on final test phase (challenge ID 'SanghyunWoo')
 https://competitions.codalab.org/competitions/18421#results
 
 Final model overview
